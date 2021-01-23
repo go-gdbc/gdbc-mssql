@@ -74,9 +74,6 @@ func (dsnAdapter SqlServerSourceNameAdapter) GetDataSourceName(dataSource gdbc.D
 	}
 
 	arguments := dataSourceUrl.Query()
-	if len(arguments) == 0 {
-		return dsn, nil
-	}
 
 	dsn = "sqlserver://"
 
