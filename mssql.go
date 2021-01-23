@@ -87,11 +87,7 @@ func (dsnAdapter SqlServerSourceNameAdapter) GetDataSourceName(dataSource gdbc.D
 		dsn = dsn + user + ":" + password
 	}
 
-	dsn = dsn + "@"
-	if host == "" {
-		return "", errors.New("host cannot be empty")
-	}
-	dsn = dsn + host
+	dsn = dsn + "@" + host
 
 	if port != "" {
 		dsn = dsn + ":" + port
